@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
@@ -16,7 +17,9 @@
     "lucide-react": "^0.373.0",
     "mysql2": "^3.9.7",
     "next": "14.2.2",
+    "next-auth": "5.0.0-beta.16",
     "pg": "^8.11.5",
+    "pnpm": "^9.0.5",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.3.0",
