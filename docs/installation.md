@@ -29,6 +29,14 @@ introspect mysql
 npx drizzle-kit introspect:mysql
 ```
 
+<https://orm.drizzle.team/kit-docs/commands>
+
+<https://orm.drizzle.team/kit-docs/commands#prototype--push>
+
+```sh
+npx drizzle-kit push:mysql
+```
+
 ## authjs
 
 <https://authjs.dev/getting-started/installation>

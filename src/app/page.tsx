@@ -1,3 +1,4 @@
+import { SignOut } from "@/components/auth/signout-button";
 import UserAvatar from "@/components/user-avatar";
 import { getUserById } from "@/data/user";
 
@@ -8,6 +9,7 @@ const HomePage = async () => {
     <div>
       <h1>Home Page</h1>
       <UserAvatar />
+      <SignOut />
     </div>
   );
 };
