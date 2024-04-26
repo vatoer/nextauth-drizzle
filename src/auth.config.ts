@@ -1,7 +1,6 @@
-import { DrizzleAdapter } from "@auth/drizzle-adapter";
+import bcrypt from "bcryptjs";
 import { NextAuthConfig } from "next-auth";
 import Google from "next-auth/providers/google";
-import { dbauth } from "./drizzle/dbauth";
 
 export default {
   providers: [
