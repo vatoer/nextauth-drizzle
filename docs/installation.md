@@ -116,3 +116,12 @@ Top-level 'await' expressions are only allowed when the 'module' option is set t
 
 <https://orm.drizzle.team/kit-docs/overview>
 <https://orm.drizzle.team/kit-docs/overview#introspecting-with-db-pull>
+
+## authjs credential
+
+<https://authjs.dev/getting-started/authentication/credentials>
+
+```sh
+pnpm add bcryptjs
+pnpm add -D @types/bcryptjs
+```

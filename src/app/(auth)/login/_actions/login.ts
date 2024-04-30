@@ -1,6 +1,7 @@
 "use server";
 import * as z from "zod";
 
+import { signIn } from "@/auth";
 import { LoginSchema } from "@/auth/login/_zodschema/login";
 import { DEFAULT_ROUTE_AFTER_LOGIN } from "@/routes";
 import { AuthError } from "next-auth";
@@ -17,7 +18,11 @@ export const login = async (data: TLogin) => {
   const { email, password } = validateFields.data;
 
   try {
-    // Login logic here
+    await signIn("credentials", {
+      email,
+      password,
+      redirectTo: DEFAULT_ROUTE_AFTER_LOGIN,
+    });
     console.log("Login success");
   } catch (error) {
     if (error instanceof AuthError) {

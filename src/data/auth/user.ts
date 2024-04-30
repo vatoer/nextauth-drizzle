@@ -18,3 +18,12 @@ export const getUserById = async (id: string) => {
     return null;
   }
 };
+
+export const getUserByEmail = async (email: string) => {
+  return {
+    id: "1",
+    email: "email",
+    password: "password",
+    perwakilan: "perwakilan",
+  };
+};
