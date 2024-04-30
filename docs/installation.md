@@ -56,3 +56,39 @@ pnpm start
 
 <https://www.reddit.com/r/nextjs/comments/1bepd14/autherror_untrustedhost_host_must_be_trusted_url/>
 <https://github.com/nextauthjs/next-auth/issues/6113>
+
+## loginform
+
+<https://ui.shadcn.com/docs/installation/next>
+
+```sh
+pnpm dlx shadcn-ui@latest init
+pnpm dlx shadcn-ui@latest add button
+```
+
+<https://react-hook-form.com/get-started/>
+
+```sh
+pnpm add react-hook-form
+```
+
+<https://zod.dev/?id=from-npm-nodebun>
+
+```sh
+pnpm add zod @hookform/resolvers
+```
+
+<https://react-icons.github.io/react-icons/>
+
+```sh
+pnpm add react-icons
+```
+
+update tsconfig.json
+
+```json
+"paths": {
+      "@/*": ["./src/*"],
+      "@/auth/*": ["./src/app/(auth)/*"]
+    }
+```
