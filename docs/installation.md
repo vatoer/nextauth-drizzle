@@ -92,3 +92,27 @@ update tsconfig.json
       "@/auth/*": ["./src/app/(auth)/*"]
     }
 ```
+
+## drizzle
+
+<https://orm.drizzle.team/docs/get-started-mysql>
+
+```sh
+pnpm add drizzle-orm mysql2
+pnpm add -D drizzle-kit
+```
+
+.env
+
+```conf
+DB_HOST=localhost
+DB_PORT=3306
+DB_USERNAME=root
+DB_PASSWORD=password
+DB_NAME=dbauth
+```
+
+Top-level 'await' expressions are only allowed when the 'module' option is set to 'es2022', 'esnext', 'system', 'node16', 'nodenext', or 'preserve', and the 'target' option is set to 'es2017' or higher.t
+
+<https://orm.drizzle.team/kit-docs/overview>
+<https://orm.drizzle.team/kit-docs/overview#introspecting-with-db-pull>
