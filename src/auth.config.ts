@@ -26,7 +26,7 @@ export default {
         if (validatedCredentials.success) {
           const { email, password } = validatedCredentials.data;
           const user = await getUserByEmail(email);
-          console.log("user", user);
+          //console.log("user", user);
           if (!user || !user.password) {
             return null;
           }
@@ -39,7 +39,8 @@ export default {
           //return user;
           return {
             ...user,
-            perwakilan: "perwakilan", // bagaimana cara mendapatkan perwakilan dari user?
+            //perwakilan: "perwakilan", // bagaimana cara mendapatkan perwakilan dari user?
+            randomkey: "randomkey",
           };
         }
 
@@ -67,17 +68,22 @@ export default {
       return true;
     },
     async session({ session, token }) {
-      //console.log("session", session);
-      //console.log("token", token);
+      console.log("mysession", session);
+      console.log("mytoken", token);
       session.user.id = token.sub as string;
-      //session.user.sekolahId = token.sekolahId as string;
+      session.user.additional = "additional data";
+      //session.user.randomkey = token.randomKey as string;
+      session.user.randomkey = "randomkey";
+
       return session;
     },
     async jwt({ token, user, account, profile }) {
-      //console.log("[jwt] token", token);
-      //console.log("[jwt] account", account);
+      console.log("[jwt] token", token);
+      console.log("[jwt] user", user);
+      console.log("[jwt] account", account);
       if (user) {
         token.id = user.id;
+
         //token.sekolahId = user.sekolahId;
       }
       return token;

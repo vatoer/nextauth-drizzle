@@ -6,6 +6,8 @@ export default async function UserAvatar() {
 
   if (!session?.user) return null;
 
+  console.log("session avatar", session);
+
   const imageSrc = session.user.image || ""; // Provide a default value for image source
 
   return (

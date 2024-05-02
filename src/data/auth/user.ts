@@ -5,7 +5,9 @@ import { eq } from "drizzle-orm";
 export const getUserById = async (id: string) => {
   console.log("getUserById", id);
   try {
-    const usr = await dbauth
+    const db = await dbauth();
+
+    const usr = await db
       .select({
         user,
       })
